@@ -20,3 +20,11 @@
 -add redux devtool in chrome
 - you should not be access other routes without login 
 - if token is not present, redirect to login page
+- Logout feature
+- get the feed and add the feed in the store
+- Build the user card on feed
+- edit profile feature
+- show toast message on save of profile
+- create the connections component
+- create the Requests component
+- add accept/reject feature to Requests component

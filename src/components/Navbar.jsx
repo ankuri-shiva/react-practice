@@ -11,7 +11,6 @@ const Navbar = () => {
   const user = useSelector((store) => store.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  console.log(user);
 
   const handleLogout = async() => {
     try{
@@ -51,7 +50,12 @@ const Navbar = () => {
             <span className="badge">New</span>
           </Link>
         </li>
-        <li><a>Settings</a></li>
+        <li>
+          <Link to = "/user/connections">Connections</Link>
+          </li>
+          <li>
+          <Link to = "/user/requests/received">Requests</Link>
+          </li>
         <li ><a  onClick={handleLogout}>Logout</a></li>
       </ul>
     </div>
