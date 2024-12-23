@@ -41,7 +41,6 @@ const EditProfile = ({user}) => {
             }, 3000);
 
         } catch(err) {
-          //console.log(err)
             setError(err.response.data);
         }
     }
@@ -80,12 +79,6 @@ value={age}
 className="input input-bordered w-full max-w-xs"
 onChange={(e) => setAge(e.target.value)} />
 </label>
-{/* 
-<label className="form-control w-full max-w-xs">Gender</label>
-<div className="label">
-  <span className="label-text">Gender </span>
-</div> */}
-
 <label htmlFor="gender">Gender</label>
 <select className="w-full max-w-xs bg-gray-800 rounded-xl p-4 label-text"
  id="gender" value={gender} onChange={(e) => setGender(e.target.value)} >
@@ -93,12 +86,6 @@ onChange={(e) => setAge(e.target.value)} />
   <option value= "female" >female</option>
   <option value= "others" >others</option>
 </select>
-
-
-{/* <input type="text" placeholder="Type here" 
-value={gender}
-className="input input-bordered w-full max-w-xs"
-onChange={(e) => setGender(e.target.value)} /> */}
 
 <label className="form-control w-full max-w-xs">
 <div className="label">

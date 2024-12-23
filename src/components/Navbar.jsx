@@ -26,12 +26,15 @@ const Navbar = () => {
   }
 
   return (
-    <div>
+    
     <div className="navbar bg-neutral">
-  <div className="flex-1">
-    <Link to ="/" className="btn btn-ghost text-xl">Dev Tinder</Link>
+      {!user && (<h1 className="text-xl">Dev Tinder</h1>)} 
+  {user && (
+    <>
+     <div className="flex-1">
+    <Link to ="/users/feed" className="btn btn-ghost text-xl">Dev Tinder</Link>
   </div>
-  {user && (<div className="flex-none gap-2">
+    <div className="flex-none gap-2">
     <div>welcome, {user.firstName}</div>
     <div className="dropdown dropdown-end mx-4">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
@@ -47,7 +50,6 @@ const Navbar = () => {
         <li>
           <Link to="/profile" className="justify-between">
             Profile
-            <span className="badge">New</span>
           </Link>
         </li>
         <li>
@@ -59,9 +61,9 @@ const Navbar = () => {
         <li ><a  onClick={handleLogout}>Logout</a></li>
       </ul>
     </div>
-  </div>)}
+  </div>
+  </>)}
 </div>
-    </div>
   )
 }
 

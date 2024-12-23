@@ -15,7 +15,7 @@ const Requests = () => {
     const fetchRequests = async() => {
         try {
             const res = await axios.get(BASE_URL+ "/user/requests/received" , {withCredentials: true});
-            console.log(res.data);
+            
 
             dispatch(addRequest(res?.data?.data));
         } catch(err) {
@@ -34,11 +34,11 @@ const Requests = () => {
     const requestReview = async(status, _id) => {
         try{
             const res = await axios.post(BASE_URL+"/request/review/"+status +"/"+ _id, {}, {withCredentials: true});
-            console.log(res)
+            
             dispatch(removeRequest(_id));
 
         }catch(err) {
-            console.log(err.message)
+            console.error(err.message)
         }
     }
 

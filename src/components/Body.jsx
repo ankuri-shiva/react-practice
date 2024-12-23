@@ -15,7 +15,7 @@ const Body = () => {
   const navigate = useNavigate();
   const userData = useSelector(store => store.user)
   const fetchUser = async() => {
-    if(userData) return;
+    if(userData) return 
     try { 
     const res = await axios.get(BASE_URL+"/profile", {
       withCredentials: true,
@@ -23,7 +23,7 @@ const Body = () => {
     dispatch(addUser(res.data))
   } catch(err) {
     navigate("/login");
-    console.err(err);
+    console.error(err.message);
   };
 }; 
 

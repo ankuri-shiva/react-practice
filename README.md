@@ -28,3 +28,6 @@
 - create the connections component
 - create the Requests component
 - add accept/reject feature to Requests component
+- send ignored/interested the user from userCard/feed
+- signup new user
+- E2E testing

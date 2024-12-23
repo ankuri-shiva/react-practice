@@ -28,6 +28,9 @@ const Feed = () => {
 
   }, []);
 
+  if(!feed) return;
+ 
+if(feed.length === 0) return <h1 className="text-center font-bold">No new users found</h1>;
 
   return (
     
